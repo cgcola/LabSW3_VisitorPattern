@@ -1,10 +1,10 @@
-public interface Telco implements TelcoSubscription {
+public class Telco implements TelcoSubscription {
     private int dataAllowance;
     private String telcoName;
     private double promoPrice;
     private boolean unliCallText;
 
-    public TelcoSubscription(int dataAllowance, String telcoName, double promoPrice, boolean unliCallText) {
+    public Telco(int dataAllowance, double promoPrice, String telcoName, boolean unliCallText) {
         this.dataAllowance = dataAllowance;
         this.telcoName = telcoName;
         this.promoPrice = promoPrice;
@@ -50,6 +50,6 @@ public interface Telco implements TelcoSubscription {
 
     @Override
     public String accept(UnliCallOffer unliPackage, boolean unliCallText){
-        return unli.showUnliCallsTextOffer(telcoName, unliCallText);
+        return unliPackage.showUnliCallsTextOffer(telcoName, unliCallText);
     }
 }

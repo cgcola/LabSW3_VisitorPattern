@@ -1,7 +1,7 @@
 public interface TelcoSubscription {
-    public string accept(UsagePromo promo, double price);
-    public string accept(UnliCallOffer unliPackage, boolean unliCallText);
-    public string getTelcoName();
+    public String accept(UsagePromo promo, double price);
+    public String accept(UnliCallOffer unliPackage, boolean unliCallText);
+    public String getTelcoName();
     public double getPromoPrice();
     public boolean getUnliCallText();
 }

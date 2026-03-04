@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class TelcoAllowance implements UsagePromo {
-    private static Map<String, Double> dataMap = new HashMap<>();
+    private static Map<String, Integer> dataMap = new HashMap<>();
 
     static {
         dataMap.put("Smart", 15);
@@ -10,7 +10,7 @@ public class TelcoAllowance implements UsagePromo {
     }
 
     @Override
-    public String showAllowance(String telcoName, double promoPrice){
-        return dataMap.get(telcoName) + " GB for ₱" + promoPrice;
+    public String showAllowance(String telcoName, double money){
+        return dataMap.get(telcoName) + " GB for ₱" + money;
     }
 }
